@@ -26,6 +26,7 @@ nav {
     z-index: 2;
     background: transparent; 
     mix-blend-mode: difference; 
+    padding: 1em;
 }
 nav ul {
     display: flex;
@@ -216,7 +217,7 @@ menu a:hover {
 }
 
 .i1 {
-  position: absolute;
+  position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -225,19 +226,28 @@ menu a:hover {
 }
 
 .i2 {
+  position: relative;
     z-index: 1;
+    grid-column: 1 / -1; /* makes it span both columns */
+}
+
+@media only screen and (min-width:420px) {
+  .i2 {
+    width: 100%;
+    aspect-ratio: 5/4;
+  }
 }
 
 
 
 main {
-    margin-top: 2.5em;
+    margin-top: 1em;
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    padding: 1em;
+    grid-column-gap: 2.5em;
+    grid-row-gap: 2em;
+    padding: 2em;
 }
 
 
@@ -252,7 +262,6 @@ main figure {
 
 main figure img{
     display: block;
-    width: 100%;
     height: auto;
     transition: opacity 200ms ease;
 }
@@ -500,25 +509,25 @@ p {
 }
 
 .sparkle-1 {
-  top: 18px;
-  left: 8px;
+  top: 2.5rem;
+  left: 1rem;
   scale: (0.8);
 }
 
 .sparkle-2 {
-  top: 30px;
-  left: 16.5%;
+  top: 3rem;
+  left: 8em;
   scale: 1.2;
 }
 
 .sparkle-3 {
-  top: 15px;
-  left: 10.5%;
+  top: 1.5rem;
+  left: 10rem;
 }
 
 .sparkle-4 {
-  top: 40px;
-  left: 6%;
+  top: 3.8rem;
+  left: 5rem;
 }
 
 .sparkle-hover:hover .sparkle{
