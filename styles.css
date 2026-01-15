@@ -55,7 +55,7 @@ display: inline;
     cursor: pointer;
 }
 
-nav.other:hover{
+.other a:hover{
   color: yellow
 }
 
