@@ -218,11 +218,7 @@ menu a:hover {
 
 .i1 {
   position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    z-index: 1;
+  aspect-ratio: 16/9;
 }
 
 .i2 {
@@ -461,7 +457,7 @@ p {
 
 .short { display: none; }
 @media (max-width: 720px) {
-  .wide { display: none !important; }
+  a .wide { display: none !important; }
   .short { display: contents !important; }
 }
 
