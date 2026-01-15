@@ -55,6 +55,10 @@ display: inline;
     cursor: pointer;
 }
 
+nav.other:hover{
+  color: yellow
+}
+
 .dropdown{
   position: inline;
   margin: 0;
