@@ -1,4 +1,5 @@
-  $('.dropdown_trigger').on('click', function() {
+  $('.dropdown_trigger').on('click', function(event) {
+    event.preventDefault();
     $('.dropdown-menu').toggle();
     $('body').toggleClass('dropdown-visible');
     const text = $(this).text();
