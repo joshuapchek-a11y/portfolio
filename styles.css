@@ -76,7 +76,7 @@ display: inline;
   position: relative;
   width: min(100%, 960px);
   height: 200vh;
-  max-height: 80vh;
+  max-height: 60vh;
   margin: 0 auto;
 }
 
