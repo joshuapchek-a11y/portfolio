@@ -80,7 +80,7 @@ display: inline;
   margin: 0 auto;
 }
 
-.slideshow img {
+.slideshow img, .slideshow video {
   position: absolute;
   inset: 0;
   width: 100%;
