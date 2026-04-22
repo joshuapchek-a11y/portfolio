@@ -60,6 +60,20 @@ display: inline;
   color: yellow
 }
 
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
 .dropdown{
   position: inline;
   margin: 0;
