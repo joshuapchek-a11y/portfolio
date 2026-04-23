@@ -47,7 +47,7 @@ nav ul {
     margin-block-end: 1em;
     padding-inline-start: 0;
     justify-content: space-between;
-    padding: 0 1em 0 1em;
+    padding: 0 1.5em 0 1.5em;
 }
 
 nav .home-li {
@@ -352,11 +352,10 @@ main img {
 footer {
     grid-area: footer;
     display: grid;
-    padding: 2em;
+    padding: 1.5em;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
-    padding: 1em;
 }
 
 footer article.wide {
