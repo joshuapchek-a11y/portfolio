@@ -9,9 +9,23 @@ body {
 main.grid-layout {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "main main"
+    "content content"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+}
+
+main.fourgrid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
     -moz-column-gap: 1rem;
     column-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "navbar navbar"
     "main main"
@@ -19,6 +33,7 @@ main.grid-layout {
     "footer footer";
     grid-template-rows: auto 1fr auto;
 }
+
 
 main.flex-layout {
   display: flex;
