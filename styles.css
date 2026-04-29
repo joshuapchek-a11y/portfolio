@@ -256,6 +256,16 @@ menu a:hover {
   color: blue
 }
 
+main a {
+    color: #424342 !important;
+    cursor: pointer;
+}
+
+main a:hover{
+  color: blue !important;
+}
+
+
 .i1 {
   position: relative;
   aspect-ratio: 16/9;
