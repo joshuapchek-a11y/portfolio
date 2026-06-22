@@ -4,7 +4,7 @@
   height: calc(100vh - var(--navbar-height, 80px));
   overflow: hidden;
   padding: 0;
-  margin: 0;
+  margin: 2rem;
   align-items: start;
 }
 
@@ -64,7 +64,7 @@
 .work-page__list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem 0 2rem 0;
   margin: 0;
   max-height: calc(100vh - var(--navbar-height, 80px));
@@ -75,11 +75,12 @@
 .work-page__item {
   border: 1px solid #000;
   margin-top: -1px;
-  padding: 1.5rem 2rem;
+  padding: 0;
   overflow: hidden;
   min-height: 75px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .work-page__link {
@@ -98,41 +99,64 @@
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    margin-bottom: 0.5rem;
+    position: static;
+    margin-left: 1rem;
+    margin-top: 0.25rem;
 }
 
 .work-page__title {
     font-family: 'Inclusive Sans', sans-serif;
     letter-spacing: -0.025em;
-    font-size: clamp(2rem,4vw,3.5rem);
+    font-size: 3.5rem;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     margin: 0;
+    position: relative;
+    left: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 .work-page__marquee {
     display: inline-flex;
-    gap: 4rem;
+    gap: 2rem;
     transform: translateX(0);
+    --scroll-distance: 0;
 }
 
-.work-page__item:hover .work-page__marquee {
-    animation: marquee 12s linear infinite;
+.work-page__item:hover .work-page__marquee.is-overflowing {
+    animation: marquee 2s ease-in-out infinite;
 }
 
 @keyframes marquee {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-50%);
+  50% {
+    transform: translateX(var(--scroll-distance));
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
 .work-page__list,
 .work-page__item {
   min-width: 0;
+}
+
+
+@media (max-width: 720px) {
+    .work-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .work-page__visual {
+        display: none;
+    }
+    .work-page__title {
+        margin-bottom: 0rem;
+    }
 }

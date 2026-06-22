@@ -18,3 +18,43 @@
     });
   });
 })();
+
+// Calculate marquee scroll distance based on text width
+(function () {
+  function updateMarqueeDistances() {
+    const marquees = document.querySelectorAll('.work-page__marquee');
+    
+    marquees.forEach(marquee => {
+      // Get the first span (original text)
+      const textSpan = marquee.querySelector('span');
+      if (!textSpan) return;
+      
+      // Get the title container for width reference
+      const title = marquee.closest('.work-page__title');
+      if (!title) return;
+      
+      // Measure text width
+      const textWidth = textSpan.offsetWidth;
+      const containerWidth = title.offsetWidth;
+      
+      // Only animate if text is wider than container
+      if (textWidth > containerWidth) {
+        // Calculate how far to scroll so all text fits in container
+        const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+        const extraPadding = rootFontSize * 2; // 2rem
+        const scrollDistance = -(textWidth - containerWidth + extraPadding);
+        marquee.style.setProperty('--scroll-distance', scrollDistance + 'px');
+        marquee.classList.add('is-overflowing');
+      } else {
+        // Text fits, don't animate
+        marquee.classList.remove('is-overflowing');
+      }
+    });
+  }
+  
+  // Initial setup after page loads
+  setTimeout(updateMarqueeDistances, 100);
+  
+  // Recalculate on window resize
+  window.addEventListener('resize', updateMarqueeDistances);
+})();
