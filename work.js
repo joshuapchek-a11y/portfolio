@@ -17,40 +17,6 @@
       });
     });
   });
-
-  // Mobile: first tap plays marquee, second tap follows the link
-  let activeTapItem = null;
-  const touchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.matchMedia('(hover: none)').matches;
-
-  if (touchDevice) {
-    items.forEach(item => {
-      const link = item.querySelector('.work-page__link');
-      if (!link) return;
-
-      link.addEventListener('click', event => {
-        const marquee = item.querySelector('.work-page__marquee');
-        if (!marquee || !marquee.classList.contains('is-overflowing')) return;
-
-        if (activeTapItem !== item) {
-          event.preventDefault();
-          if (activeTapItem) {
-            activeTapItem.classList.remove('marquee-active');
-          }
-          activeTapItem = item;
-          item.classList.add('marquee-active');
-        }
-      });
-    });
-
-    document.addEventListener('click', event => {
-      if (!event.target.closest('.work-page__item')) {
-        if (activeTapItem) {
-          activeTapItem.classList.remove('marquee-active');
-          activeTapItem = null;
-        }
-      }
-    });
-  }
 })();
 
 // Calculate marquee scroll distance based on text width
