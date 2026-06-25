@@ -561,7 +561,7 @@ p {
 }
 
 .socials-container a {
-  background-color: white;
+  background-color: #e2e6e6;
   border-radius: 50%;
   place-items: center;
   height: 64px;
