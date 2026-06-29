@@ -363,6 +363,9 @@ main figure:hover figcaption {
 
 main article.wide {
   grid-column: 1 / -1; /* makes it span both columns */
+  video {
+    align-content: center;
+  }
 }
 
 main img {
