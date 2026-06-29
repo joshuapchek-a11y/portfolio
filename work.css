@@ -197,7 +197,7 @@
     margin: 0;
     position: relative;
     left: 1rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.25rem !important;
 }
 
 .work-page__marquee {
