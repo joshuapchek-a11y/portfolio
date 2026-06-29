@@ -8,7 +8,7 @@ body {
 
 main.grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 2.5em;
   row-gap: 2em;
   padding: 2em;
@@ -363,13 +363,13 @@ main figure:hover figcaption {
 
 main article.wide {
   grid-column: 1 / -1; /* makes it span both columns */
-  video {
-    align-content: center;
   }
-}
 
-main img {
+main img,
+main video,
+main iframe {
     max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
