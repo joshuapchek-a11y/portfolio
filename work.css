@@ -8,6 +8,12 @@
   align-items: start;
 }
 
+@media (min-width: 1440px) {
+  .work-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .work-page__visual {
   position: sticky;
   top: var(--navbar-height, 80px); /* stick below your navbar */
