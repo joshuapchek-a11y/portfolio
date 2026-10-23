@@ -6,6 +6,14 @@ body {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Diatype';
+    src: url('./fonts/ABCDiatypeEdu-Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 main.grid-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -39,7 +47,7 @@ main.flex-layout {
 }
 
 nav {
-    font-family: 'Inclusive Sans';
+    font-family: 'Diatype';
     align-items: center;
     top: 0;
     position: sticky;
@@ -201,7 +209,7 @@ nav .menu2-li {
 
 
 menu{
-  font-family: 'Inclusive Sans';
+  font-family: 'Diatype';
   position: fixed;
   top: 0;
   right: -100%;
@@ -332,7 +340,7 @@ main figure video{
 
 main figcaption {
     text-align: center;
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: #000;
@@ -431,8 +439,8 @@ footer h2 {
   }
 }
 
-.inclusive-sans-h1 {
-  font-family: "Inclusive Sans", sans-serif;
+.diatype-h1 {
+  font-family: "Diatype", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -463,16 +471,15 @@ footer h2 {
 }
 
 h1 {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: #000;
     margin: 0;
-    letter-spacing: -0.025em;
 }
 h2 {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: #000;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -485,28 +492,26 @@ h3 {
 }
 
 h4 {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: #000;
     font-size: 2.5rem;
     font-style: regular;
     padding-top: 1rem;
-    letter-spacing: -0.025em;
     margin: 0;
 }
 
 h5 {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: #000;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1rem;
     font-size: 2rem;
-    letter-spacing: -0.025em;
     padding-bottom: 0rem;
     margin: 0;
 }
 
 h6 {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: white;
     font-style: bold;
     font-size: 2rem;
@@ -514,9 +519,8 @@ h6 {
 }
 
 p {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     color: #000;
-    letter-spacing: -0.025em;
 }
 
 
