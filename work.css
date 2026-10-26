@@ -8,6 +8,35 @@
   align-items: start;
 }
 
+@font-face {
+    font-family: 'Diatype';
+    src: url('./fonts/ABCDiatypeEdu-Heavy.woff2') format('woff2');
+    font-weight: 850;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Diatype';
+    src: url('./fonts/ABCDiatypeEdu-HeavyItalic.woff2') format('woff2');
+    font-weight: 850;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Diatype';
+    src: url('./fonts/ABCDiatypeEdu-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+i {
+  font-family: 'Diatype', sans-serif;
+  font-weight: 850;
+  font-style: italic;
+}
+
 @media (min-width: 1440px) {
   .work-page {
     grid-template-columns: 1fr 1fr;
@@ -97,9 +126,9 @@
 }
 
 .work-page__meta {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     letter-spacing: -0.025em;
-    font-weight: 200;
+    font-weight: 300;
     display: flex;
     gap: 2.5rem;
     font-size: 1rem;
@@ -111,10 +140,10 @@
 }
 
 .work-page__title {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     letter-spacing: -0.025em;
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 850;
     line-height: 1;
     white-space: nowrap;
     overflow: visible;
@@ -169,9 +198,9 @@
 }
 
 .work-page__meta {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     letter-spacing: -0.025em;
-    font-weight: 200;
+    font-weight: 300;
     display: flex;
     gap: 2.5rem;
     font-size: 1rem;
@@ -183,10 +212,10 @@
 }
 
 .work-page__title {
-    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Diatype', sans-serif;
     letter-spacing: -0.025em;
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 850;
     line-height: 1;
     white-space: nowrap;
     overflow: visible;
